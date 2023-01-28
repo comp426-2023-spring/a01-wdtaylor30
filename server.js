@@ -30,10 +30,12 @@ console.log(port);
 // If there is an error, put it on the console error and return. 
 // Do not be nice about exiting.
 
-fs.readFile("./public/index.html", (err) => {
+fs.readFile("./public/index.html", 'utf8', (err, data) => {
     // if there's an error report it
-    if (err) console.log(err);
-    return;
+    if (err) {
+        console.log(err);
+        return;
+    }
 })
 
 // Define a const `server` as an arrow function using http.createServer. 
