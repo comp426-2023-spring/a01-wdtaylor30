@@ -1,3 +1,6 @@
+// TODO: Great work! Some bugs caught by the autograder.
+// TODO: Read through the hints that are given in the assignment README.
+
 // Require http module
 var http = require('http');
 
@@ -28,8 +31,8 @@ console.log(port);
 // Do not be nice about exiting.
 
 fs.readFile("./public/index.html", (err) => {
-    // if there's an error throw it
-    if (err) throw err;
+    // if there's an error report it
+    if (err) console.log(err);
     return;
 })
 
